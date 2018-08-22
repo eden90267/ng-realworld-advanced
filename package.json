@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:test": "ng build --base-href=/test",
+    "build:prod": "ng build --base-href=/ng-realworld-advanced",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

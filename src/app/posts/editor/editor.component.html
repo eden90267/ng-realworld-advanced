@@ -1,0 +1,29 @@
+<div class="editor-page">
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-10 col-md-offset-1 col-xs-12">
+        <form [formGroup]="post">
+          <fieldset class="form-group">
+            <input class="form-control form-control-lg" type="text" placeholder="Post Title" formControlName="title">
+          </fieldset>
+          <fieldset class="form-group">
+            <textarea class="form-control" rows="8" placeholder="Write your post (in markdown)" formControlName="body"></textarea>
+          </fieldset>
+          <fieldset class="form-group">
+            <input class="form-control" type="text" placeholder="Enter tags" (keydown)="onKeyDown($event)">
+            <div class="tag-list">
+              <span class="label label-pill label-default" *ngFor="let tag of tags.value">
+                <i class="ion-close-round"></i> {{tag}}
+              </span>
+            </div>
+          </fieldset>
+          <button type="button" class="btn btn-lg btn-primary pull-xs-right" (click)="submit()">
+            Create Post
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
